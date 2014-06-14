@@ -30,7 +30,7 @@ angular.module('ui.format',[]).filter('format', function(){
       }
       else {
         angular.forEach(replace, function(value, key){
-          target = target.split(':'+key).join(value);
+          target = target.split('%'+key+'%').join(value);
         });
       }
     }

@@ -27,7 +27,7 @@ describe('format', function() {
     expect(formatFilter('First is $0, then $1, finally $2', ['$1','$2','$0'])).toEqual('First is $1, then $2, finally $0');
   });
   it('should replace all instances :tokens based on keys of token object', function() {
-    expect(formatFilter('First is :first, next is :second, finally there is :third', {first:'bob',second:'frank',third:'dianne'})).toEqual('First is bob, next is frank, finally there is dianne');
+    expect(formatFilter('First is %first%, next is %second%, finally there is %third%', {first:'bob',second:'frank',third:'dianne'})).toEqual('First is bob, next is frank, finally there is dianne');
   });
   it('should do nothing if tokens are undefined', function() {
     expect(formatFilter('Hello There')).toEqual('Hello There');
